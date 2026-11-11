@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PSXseecon", "PSXseecon\PSXseecon.vcxproj", "{4C5F4DEC-24DD-470B-9C14-E19282D64544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|x64 = Development|x64
+		Production|x64 = Production|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C5F4DEC-24DD-470B-9C14-E19282D64544}.Development|x64.ActiveCfg = Development|x64
+		{4C5F4DEC-24DD-470B-9C14-E19282D64544}.Development|x64.Build.0 = Development|x64
+		{4C5F4DEC-24DD-470B-9C14-E19282D64544}.Production|x64.ActiveCfg = Production|x64
+		{4C5F4DEC-24DD-470B-9C14-E19282D64544}.Production|x64.Build.0 = Production|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A934641-754A-4527-875C-318E52D4737A}
+	EndGlobalSection
+EndGlobal

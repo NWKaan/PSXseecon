@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Production|x64">
+      <Configuration>Production</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C5F4DEC-24DD-470B-9C14-E19282D64544}</ProjectGuid>
+    <RootNamespace>PSXseecon64</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>PSXseecon</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Production|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <IncludePath>
+    </IncludePath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <EnableCppCoreCheck>true</EnableCppCoreCheck>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
+    <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
+    <ClangTidyChecks>.clang-tidy</ClangTidyChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|x64'">
+    <IncludePath>
+    </IncludePath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <EnableCppCoreCheck>true</EnableCppCoreCheck>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
+    <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
+    <ClangTidyChecks>.clang-tidy</ClangTidyChecks>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+    <VcpkgAutoBootstrap>false</VcpkgAutoBootstrap>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <VcpkgTriplet>x64-windows</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Production|x64'">
+    <VcpkgTriplet>x64-windows</VcpkgTriplet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>true</EnablePREfast>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4875;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableModules>false</EnableModules>
+      <AdditionalOptions>/utf-8  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions>ws2_32.lib Wininet.Lib version.lib  psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PRODUCTION;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>true</EnablePREfast>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4875;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableModules>false</EnableModules>
+      <AdditionalOptions>/utf-8  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions>ws2_32.lib Wininet.Lib version.lib  psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src/exceptions.cpp" />
+    <ClCompile Include="src/guibase.cpp" />
+    <ClCompile Include="src/support.cpp" />
+    <ClCompile Include="src/txtfileio.cpp" />
+    <ClCompile Include="src/versiondata.cpp" />
+    <ClCompile Include="src/winapi.cpp" />
+    <ClCompile Include="src/inifilereaders.cpp" />
+    <ClCompile Include="src/siocclients.cpp" />
+    <ClCompile Include="src/siocparameters.cpp" />
+    <ClCompile Include="src/ssifilereader.cpp" />
+    <ClCompile Include="src/TCPIPclients.cpp" />
+    <ClCompile Include="src/frompsxclient.cpp" />
+    <ClCompile Include="src/gui.cpp" />
+    <ClCompile Include="src/main.cpp" />
+    <ClCompile Include="src/readcfg.cpp" />
+    <ClCompile Include="src/BCDfies.cpp" />
+    <ClCompile Include="src/CfgPar.cpp" />
+    <ClCompile Include="src/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Development|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Production|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src/topsxclient.cpp" />
+    <ClCompile Include="src/varpool.cpp" />
+    <ClCompile Include="src/vars.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include/constants_char_string.hpp" />
+    <ClInclude Include="include/constants.hpp" />
+    <ClInclude Include="include/exceptions.hpp" />
+    <ClInclude Include="include/guibase.hpp" />
+    <ClInclude Include="include/stdafx.hpp" />
+    <ClInclude Include="include/support.hpp" />
+    <ClInclude Include="include/txtfileio.hpp" />
+    <ClInclude Include="include/versiondata.hpp" />
+    <ClInclude Include="include/winapi.hpp" />
+    <ClInclude Include="include/BCDfies.hpp" />
+    <ClInclude Include="include/CfgPar.hpp" />
+    <ClInclude Include="include/mypar.hpp" />
+    <ClInclude Include="include/qcode.hpp" />
+    <ClInclude Include="include/siocclients.hpp" />
+    <ClInclude Include="include/siocparameters.hpp" />
+    <ClInclude Include="include/ssifilereader.hpp" />
+    <ClInclude Include="include/TCPIPclients.hpp" />
+    <ClInclude Include="include/condcomp.hpp" />
+    <ClInclude Include="include/frompsxclient.hpp" />
+    <ClInclude Include="include/targetver.hpp" />
+    <ClInclude Include="include/topsxclient.hpp" />
+    <ClInclude Include="include/configuration.hpp" />
+    <ClInclude Include="include/gui.hpp" />
+    <ClInclude Include="include/main.hpp" />
+    <ClInclude Include="include/readcfg.hpp" />
+    <ClInclude Include="include/varpool.hpp" />
+    <ClInclude Include="include/vars.hpp" />
+    <ClInclude Include="include\utf8win.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="PSXseecon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="psxseecon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\fonts\awnxmcduS_101.TTF" />
+    <None Include="assets\fonts\awnxmcduL_101.TTF" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="CopyCduFonts" AfterTargets="Build">
+    <Copy
+      SourceFiles="$(MSBuildProjectDirectory)\assets\fonts\awnxmcduS_101.TTF;$(MSBuildProjectDirectory)\assets\fonts\awnxmcduL_101.TTF"
+      DestinationFolder="$(TargetDir)"
+      SkipUnchangedFiles="true" />
+  </Target>
+</Project>

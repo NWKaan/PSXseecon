@@ -1,0 +1,33 @@
+# Visual Studio local state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+*.sdf
+*.opensdf
+
+# Build output and generated dependencies
+x64/
+Win32/
+Debug/
+Release/
+vcpkg_installed/
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.tlog/
+*.lastbuildstate
+*.log
+*.aps
+*.ipch
+*.pch
+
+# Runtime and temporary files
+PSXseecon/PSXseecon.cfg
+PSXseecon/RCa*
+*.tmp

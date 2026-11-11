@@ -1,0 +1,58 @@
+#include "include/targetver.hpp"
+
+#include <windows.h>
+
+#include "include/configuration.hpp"
+
+#define VER_LANG        0x0409   // English (United States)
+#define VER_CODEPAGE    1200     // Unicode
+
+IDI_PROGRAM  ICON  "PSXseecon.ico"
+
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_FILEVERSION
+PRODUCTVERSION 	VER_FILEVERSION 
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+FILEFLAGS      	0
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	VFT_APP
+FILESUBTYPE    	0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+   // 0x0809 = English (UK), 0x04E4 = 1252 (Windows Latin-1)
+    BLOCK "080904E4"
+    BEGIN
+      VALUE "CompanyName",      "Nico W. Kaan"
+      VALUE "FileDescription",  VER_DESCRIPTION_STR 
+      VALUE "FileVersion",      VER_FILEVERSION_STR
+      VALUE "InternalName",     "PSXseecon\0"
+      VALUE "LegalCopyright",   VER_COPYRIGHT_STR
+      VALUE "LegalTrademarks1", "PSXseecon\0"
+      VALUE "LegalTrademarks2", ""
+      VALUE "OriginalFilename", VER_ORIGFILENAME_STR
+      VALUE "ProductName",      VER_PRODUCTNAME_STR64
+      VALUE "ProductVersion",   VER_FILEVERSION_STR
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", , VER_LANG, VER_CODEPAGE
+  END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+   IDS_APP_TITLE       "PSXseecon"
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
