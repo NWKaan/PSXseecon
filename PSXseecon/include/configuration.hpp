@@ -28,5 +28,5 @@
 
 // info for resource building, can therefore not be replaced by const strings ...
 
-#define VER_FILEVERSION 3, 46, 0, 0
-#define VER_FILEVERSION_STR "3.46.0"
+#define VER_FILEVERSION 4, 0, 0, 0
+#define VER_FILEVERSION_STR "4.0.0"
