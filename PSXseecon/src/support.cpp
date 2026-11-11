@@ -32,31 +32,6 @@ namespace nwk {
 
 namespace nwk {
 
-	static auto lf_isWin(const DWORD num) noexcept {
-		OSVERSIONINFOEX osvi;
-		DWORDLONG dwlConditionMask = 0;
-		constexpr BYTE op = VER_EQUAL;
-
-		// Initialize the OSVERSIONINFOEX structure.
-
-		ZeroMemory(&osvi, sizeof(OSVERSIONINFOEX));
-		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
-		osvi.dwMajorVersion = num;
-
-		// Initialize the condition mask.
-
-		VER_SET_CONDITION(dwlConditionMask, VER_MAJORVERSION, op);
-
-		// Perform the test.
-
-		VerifyVersionInfo(&osvi, VER_MAJORVERSION, dwlConditionMask);
-		return osvi.dwMajorVersion == num;
-	}
-
-	auto gf_isWin10OrLater() noexcept -> bool {
-		return lf_isWin(10) || lf_isWin(11);
-	}
-
 	auto gf_Plural(const size_t num) -> std::string {
 		return (num == 0) || (num > 1) ? gksStr : gkEmptyStr;
 	}

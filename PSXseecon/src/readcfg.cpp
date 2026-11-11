@@ -14,7 +14,7 @@ namespace nwk {
 #pragma warning(push)
 #pragma warning(disable:26426)
 	CfgBool g_CfgCduBold, g_CfgCduBorder, g_CfgCduLScreen, g_CfgCduCScreen, g_CfgCduRScreen, g_CfgInvertHfSensL, g_CfgLCDCdu,
-		g_CfgVersionCheck,
+		
 		g_CfgInvertBigFreqKnobL, g_CfgInvertSmallFreqKnobL, g_CfgInvertHfSensC, g_CfgInvertBigFreqKnobC, g_CfgInvertSmallFreqKnobC,
 		g_CfgInvertHfSensR, g_CfgInvertBigFreqKnobR, g_CfgInvertSmallFreqKnobR, g_CfgInvertDeltaStbyIasBug1, g_CfgInvertDeltaStbyIasBug2,
 		g_CfgInvertDeltaStbyIasBug3, g_CfgInvertAbsStbyIasBug1, g_CfgInvertAbsStbyIasBug2, g_CfgInvertAbsStbyIasBug3, g_CfgInvertEcpMinsCp,
@@ -43,8 +43,6 @@ namespace nwk {
 		g_CfgCduLScreen = { "CDU_L"s, false };
 		g_CfgCduCScreen = { "CDU_C"s, false };
 		g_CfgCduRScreen = { "CDU_R"s, false };
-
-		g_CfgVersionCheck = { "VERSION_CHECK"s , true };
 
 		g_CfgLCDCdu = { "LCD_CDU"s, false };
 
@@ -193,7 +191,6 @@ namespace nwk {
 			g_CfgPSXHostAddress.value_ = kLocalHostIPAddressStr;
 		} else {
 			try {
-				g_CfgVersionCheck.readValue();
 
 				g_CfgMONITOR_PSX_IN_Qh.readValue();
 				g_CfgMONITOR_PSX_IN_Qi.readValue();

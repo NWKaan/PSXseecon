@@ -18,7 +18,7 @@ namespace nwk {
 	extern bool g_CfgCduScreen;
 
 	extern CfgBool g_CfgCduBold, g_CfgCduBorder, g_CfgCduLScreen, g_CfgCduCScreen, g_CfgCduRScreen, g_CfgInvertHfSensL, g_CfgLCDCdu,
-		g_CfgVersionCheck,
+		
 		g_CfgInvertBigFreqKnobL, g_CfgInvertSmallFreqKnobL, g_CfgInvertHfSensC, g_CfgInvertBigFreqKnobC, g_CfgInvertSmallFreqKnobC,
 		g_CfgInvertHfSensR, g_CfgInvertBigFreqKnobR, g_CfgInvertSmallFreqKnobR, g_CfgInvertDeltaStbyIasBug1, g_CfgInvertDeltaStbyIasBug2,
 		g_CfgInvertDeltaStbyIasBug3, g_CfgInvertAbsStbyIasBug1, g_CfgInvertAbsStbyIasBug2, g_CfgInvertAbsStbyIasBug3, g_CfgInvertEcpMinsCp,

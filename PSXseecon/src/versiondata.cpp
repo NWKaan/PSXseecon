@@ -113,18 +113,4 @@ namespace nwk {
 		}
 		return version;
 	}
-
-	auto gf_versionCheck() -> void {
-		if (const auto version{ lf_getVersionStringFromInternet() }; !version.empty()) { 
-			if (const VersionData r{ version }; r > gkCurrentVersion) {
-				g_gui.setNewVersionNumber(*r, r << gkCurrentVersion);
-				if (r >> gkCurrentVersion) {
-					throw UserErrorException(99, "This version has expired"s);
-				} 
-				g_gui.line("A new version is available"s);
-			}
-		} else {
-			g_log.line("Version file not found"s);
-		}
-	}
 } // namespace nwk

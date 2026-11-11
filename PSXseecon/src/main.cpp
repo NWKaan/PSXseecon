@@ -349,9 +349,6 @@ namespace nwk {
       gf_threadStart(iam);
       try {
         gf_getCfgData();
-        if (*g_CfgVersionCheck && gf_isWin10OrLater()) {
-          gf_versionCheck();
-        }
 #ifdef LIST_SIOC_VARS
         (*l_varpoolPtr).generateSIOCVarsList();
         lf_decideUponExitStrategy(LksExitPossibility::E_IOCP_CLOSE);
